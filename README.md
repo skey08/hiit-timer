@@ -11,7 +11,7 @@ A HIIT or Tabata-style timer to help you exercise, lose weight, and burn fat.
 - Keyboard accessible
 - Mobile first
 - Responsive
-- Created April 2019
+- Created ______
 
 ## User Stories
 * Upon opening the app, I am taken to the Home screen.
