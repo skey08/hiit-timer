@@ -7,7 +7,7 @@ A HIIT or Tabata-style timer to help you exercise, lose weight, and burn fat.
 - ES6
 - Babel 6.26.0
 - Sass
-- Flexbox
+- CSS Grid
 - Keyboard accessible
 - Mobile first
 - Responsive
