@@ -31,6 +31,7 @@ A HIIT or Tabata-style timer to help you exercise, lose weight, and burn fat.
 * During the workout, I can hear a different audible sound to know a rest period is starting.
 * During the workout, I can press Forward to go to the next exercise or Back to go to the last one.
 * During the workout, I can hear a ticking sound 5 seconds before an exercise period starts so I can be prepared.
+* During the workout, I can at any time toggle the sound on and off.
 * During the workout, during the exercise or rest period, I can pause and continue the workout.
 * At the end of the workout, I get a congratulatory message with my "on" time, "off" time, # of sets, and total workout duration.
 * At the end of the workout, I can choose to end the workout or do another one. 
