@@ -1,3 +1,9 @@
+const mainHeading = (props) => {
+	return (
+		<div>Hey</div>
+	)
+}
+
 class Timer extends React.Component {
 	constructor(props) {
 		super(props);
@@ -7,11 +13,11 @@ class Timer extends React.Component {
 	}
 
 	render() {
-
 		return(
-			<header>
-				<h1>HIIT Tabata Interval Workout Timer</h1>
-			</header>
+			<div>
+				<h1 className="timer__main-heading">HIIT Tabata Interval Workout Timer</h1>
+				<mainHeading />
+			</div>
 		)
 	}
 }
