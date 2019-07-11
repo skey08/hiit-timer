@@ -1,6 +1,15 @@
-const mainHeading = (props) => {
+const MainHeading = (props) => {
 	return (
-		<div>Hey</div>
+		<h1 className="timer__main-heading">HIIT Tabata Interval Workout Timer</h1>
+	)
+}
+
+const TimerPrompt = (props) => {
+	return (
+		<div className="timer__prompt">
+			<button className="timer__btn">Simple HIIT Timer</button>
+			<button className="timer__btn">Custom Timer with Exercises</button>
+		</div>
 	)
 }
 
@@ -14,9 +23,9 @@ class Timer extends React.Component {
 
 	render() {
 		return(
-			<div>
-				<h1 className="timer__main-heading">HIIT Tabata Interval Workout Timer</h1>
-				<mainHeading />
+			<div className="timer__container">
+				<MainHeading />
+				<TimerPrompt />
 			</div>
 		)
 	}

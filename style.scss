@@ -1,6 +1,12 @@
 .timer {
+	&__container {
+
+	}
 	&__main-heading {
 		text-align: center;
-		margin: 1em 0;
+		margin: .5em 0;
+	}
+	&__prompt {
+
 	}
 }
