@@ -8,7 +8,6 @@ A HIIT or Tabata-style timer to help you exercise, lose weight, and burn fat.
 - Babel 6.26.0
 - Sass
 - CSS Grid
-- Keyboard accessible
 - Mobile first
 - Responsive
 - Created ______
