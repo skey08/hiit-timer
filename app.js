@@ -1,13 +1,22 @@
-const Logo = (props) => {
+
+const Logo = () => {
 	return (
 		<div class="timer__logo">
-			<img class="timer__logo-img" src="/assets/logo.png"/>
+			<h1 className="timer__main-heading sr-only">HIIT Timer</h1>
+			<img class="timer__logo-img" src="./assets/logo.png"/>
 		</div>
-		<h1 className="timer__main-heading sr-only">HIIT Timer</h1>
 	)
 }
 
-const TimerPrompt = (props) => {
+const Header = () => {
+	return (
+		<header class="timer__header">
+			<Logo />
+		</header>
+	)
+}
+
+const TimerPrompt = () => {
 	return (
 		<div className="timer__prompt">
 			<button className="timer__btn">Simple HIIT Timer</button>
@@ -27,7 +36,7 @@ class Timer extends React.Component {
 	render() {
 		return(
 			<div className="timer__container">
-				<Logo />
+				<Header />
 				<TimerPrompt />
 			</div>
 		)

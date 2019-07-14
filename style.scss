@@ -1,6 +1,7 @@
 $sunflower: #FFC613;
 $lightOrange: #FDCB2A;
 $yellow: #f7c422;
+$blackPearl: #1E242E;
 
 html, body, div, h1 {
 	padding: 0;
@@ -8,17 +9,26 @@ html, body, div, h1 {
 	box-sizing: border-box;
 }
 
+html {
+	background: $blackPearl;
+}
+
 .body {
 	font-size: 16px;
 }
 
 .timer {
-	padding: .5em .5em;
-	&__container {
+	&__logo {
 
 	}
+	&__logo-img {
+		max-width: 100px;
+	}
+	&__container {
+		background: #000;
+	}
 	&__logo {
-		
+
 	}
 	&__prompt {
 

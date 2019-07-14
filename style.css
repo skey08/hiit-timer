@@ -3,11 +3,16 @@ html, body, div, h1 {
   margin: 0;
   box-sizing: border-box; }
 
+html {
+  background: #1E242E; }
+
 .body {
   font-size: 16px; }
 
-.timer {
-  padding: .5em .5em; }
+.timer__logo-img {
+  max-width: 100px; }
+.timer__container {
+  background: #000; }
 
 .sr-only {
   position: absolute;
