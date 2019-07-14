@@ -10,8 +10,18 @@ const Header = () => {
 const TimerPrompt = () => {
 	return (
 		<div className="timer__body">
-			<button className="timer__btn">Simple</button>
-			<button className="timer__btn">Custom</button>
+			<button className="timer__btn">
+				<picture className="timer__btn-picture">
+					<img src="./assets/icon-simple-ring.png" className="timer__btn-icon" />
+				</picture>
+				<span className="timer__btn-text">Simple</span>
+			</button>
+			<button className="timer__btn">
+				<picture className="timer__btn-picture">
+					<img src="./assets/icon-simple-ring.png" className="timer__btn-icon" />
+				</picture>
+				<span className="timer__btn-text">Custom</span>
+			</button>
 		</div>
 	)
 }

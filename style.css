@@ -1,4 +1,5 @@
-html, body, div, h1 {
+@import url("https://fonts.googleapis.com/css?family=Alegreya+Sans:300,500,700&display=swap");
+html, body, div, h1, span, picture, img {
   padding: 0;
   margin: 0;
   box-sizing: border-box; }
@@ -6,9 +7,9 @@ html, body, div, h1 {
 html {
   background: #1E242E; }
 
-.body {
+body {
   font-size: 16px;
-  height: 100%; }
+  font-family: 'Alegreya Sans', sans-serif; }
 
 .timer__container {
   background: #000;
@@ -31,11 +32,21 @@ html {
   justify-content: center; }
 .timer__btn {
   background: #333A48;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   color: #fff;
   text-transform: uppercase;
   -webkit-font-smoothing: antialiased;
-  padding: .25em 1em;
-  font-size: 3rem; }
+  padding: .25em .5em .25em .25em;
+  font-size: 3rem;
+  font-weight: 300; }
+.timer__btn-picture {
+  display: inline-flex;
+  flex-direction: column; }
+.timer__btn-icon {
+  max-width: 35px;
+  margin: 15px; }
 
 .sr-only {
   position: absolute;
