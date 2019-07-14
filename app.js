@@ -1,6 +1,9 @@
-const MainHeading = (props) => {
+const Logo = (props) => {
 	return (
-		<h1 className="timer__main-heading">HIIT Tabata Interval Workout Timer</h1>
+		<div class="timer__logo">
+			<img class="timer__logo-img" src="/assets/logo.png"/>
+		</div>
+		<h1 className="timer__main-heading sr-only">HIIT Timer</h1>
 	)
 }
 
@@ -24,7 +27,7 @@ class Timer extends React.Component {
 	render() {
 		return(
 			<div className="timer__container">
-				<MainHeading />
+				<Logo />
 				<TimerPrompt />
 			</div>
 		)
