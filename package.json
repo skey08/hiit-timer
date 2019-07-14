@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Ly900/hiit-timer/issues"
   },
-  "homepage": "https://github.com/Ly900/hiit-timer#readme"
+  "homepage": "https://github.com/Ly900/hiit-timer#readme",
+  "dependencies": {
+    "react-time-picker": "^3.6.1"
+  }
 }
