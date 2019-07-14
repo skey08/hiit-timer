@@ -7,14 +7,25 @@ html {
   background: #1E242E; }
 
 .body {
-  font-size: 16px; }
+  font-size: 16px;
+  height: 100%; }
 
+.timer__container {
+  background: #000;
+  display: grid;
+  grid-template-rows: auto 1fr; }
+.timer__header {
+  text-align: center;
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
 .timer__logo-img {
   max-width: 250px; }
-.timer__container {
-  background: #000; }
-.timer__prompt {
-  background: white; }
+.timer__body {
+  background: white;
+  height: 55vh; }
 
 .sr-only {
   position: absolute;
