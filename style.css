@@ -17,7 +17,7 @@ html {
 .timer__header {
   text-align: center;
   height: 45vh;
-  display: flex;
+  display: grid;
   flex-direction: column;
   align-items: center;
   justify-content: center; }
