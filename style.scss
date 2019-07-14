@@ -3,8 +3,8 @@
 $sunflower: #FFC613;
 $lightOrange: #FDCB2A;
 $yellow: #f7c422;
-$blackPearl: #1E242E;
-$licorice: #323947;
+$blackPearl: lighten(#1E242E, 2%);
+$licorice: lighten(#323947, 2%);
 
 html, body, div, h1, span, picture, img {
 	padding: 0;
