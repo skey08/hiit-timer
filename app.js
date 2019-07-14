@@ -10,8 +10,8 @@ const Header = () => {
 const TimerPrompt = () => {
 	return (
 		<div className="timer__body">
-			<button className="timer__btn">Simple HIIT Timer</button>
-			<button className="timer__btn">Custom Timer with Exercises</button>
+			<button className="timer__btn">Simple</button>
+			<button className="timer__btn">Custom</button>
 		</div>
 	)
 }

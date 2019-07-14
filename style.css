@@ -16,16 +16,23 @@ html {
   grid-template-rows: auto 1fr; }
 .timer__header {
   text-align: center;
-  height: 45vh;
+  height: 35vh;
   display: grid;
   flex-direction: column;
   align-items: center;
   justify-content: center; }
 .timer__logo-img {
-  max-width: 250px; }
+  max-width: 250px;
+  margin-top: 20%; }
 .timer__body {
-  background: white;
-  height: 55vh; }
+  background: white; }
+.timer__btn {
+  background: #333A48;
+  color: #fff;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+  padding: .25em 1em;
+  font-size: 3rem; }
 
 .sr-only {
   position: absolute;
