@@ -25,7 +25,10 @@ html {
   max-width: 250px;
   margin-top: 20%; }
 .timer__body {
-  background: white; }
+  background: white;
+  display: grid;
+  grid-row-gap: 1em;
+  justify-content: center; }
 .timer__btn {
   background: #333A48;
   color: #fff;

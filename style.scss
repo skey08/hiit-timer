@@ -42,6 +42,9 @@ html {
 	}
 	&__body {
 		background: white;
+    display: grid;
+    grid-row-gap: 1em;
+    justify-content: center;
 	}
 	&__btn {
 		background: $licorice;
