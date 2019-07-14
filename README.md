@@ -13,14 +13,15 @@ A HIIT or Tabata-style timer to help you exercise, lose weight, and burn fat.
 - Responsive
 - Created ______
 
-## User Stories
-* Upon opening the app, I am taken to the Home screen (Done).
-
 *Note: All requirements below are for the Simple Interval Timer only.*
+
+## User Stories
 
 * MVP
   * Next Step
+  
 #### Home Screen
+* Upon opening the app, I am taken to the Home screen (Done).
 * I can choose Simple Interval Timer or Customized Timer with Exercises (Done).
 #### Screen 1: "On"
 * I can choose how long I want my exercise duration, or "on" time, to be.
