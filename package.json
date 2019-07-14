@@ -1,0 +1,19 @@
+{
+  "name": "hiit-timer",
+  "version": "1.0.0",
+  "description": "HIIT Timer",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ly900/hiit-timer.git"
+  },
+  "author": "Ly Nguyen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ly900/hiit-timer/issues"
+  },
+  "homepage": "https://github.com/Ly900/hiit-timer#readme"
+}
