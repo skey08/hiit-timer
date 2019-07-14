@@ -1,8 +1,8 @@
 const Header = () => {
 	return (
-		<header class="timer__header">
+		<header className="timer__header">
 			<h1 className="timer__main-heading sr-only">HIIT Timer</h1>
-			<img class="timer__logo-img" src="./assets/logo.png"/>
+			<img className="timer__logo-img" src="./assets/logo.png"/>
 		</header>
 	)
 }
