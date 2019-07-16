@@ -7,14 +7,14 @@ const Header = () => {
 	)
 }
 
-const TimerPrompt = () => {
+const TimerPrompt = (props) => {
 	return (
 		<div className="timer__body">
 			<button className="timer__btn">
 				<picture className="timer__btn-picture">
 					<img src="./assets/icon-ring-simple.png" className="timer__btn-icon" />
 				</picture>
-				<span className="timer__btn-text">Simple</span>
+				<span className="timer__btn-text" onClick={ () => props.nextScreen() }>Simple</span>
 			</button>
 			<button className="timer__btn">
 				<picture className="timer__btn-picture">
@@ -35,11 +35,15 @@ class Timer extends React.Component {
 		}
 	}
 
+	nextScreen() {
+		console.log("go to the next screen");
+	}
+
 	render() {
 		return(
 			<div className="timer__container">
 				<Header />
-				<TimerPrompt />
+				<TimerPrompt nextScreen={this.nextScreen}/>
 			</div>
 		)
 	}
