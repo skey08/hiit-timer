@@ -24,7 +24,7 @@ A HIIT or Tabata-style timer to help you exercise, lose weight, and burn fat.
 * Upon opening the app, I am taken to the Home screen (Done).
 * I can choose "Simple" or "Custom" (Done).
 #### Screen 1: "On"
-* After clicking "Simple," I can choose how long I want my exercise duration, or "on" time, to be. Options: 10, 20, 30, 45, 60, or 90 seconds.
+* After clicking "Simple," I can choose how long I want my exercise duration, or "on" time, to be. Options: 20, 30, 45, or 60 seconds.
   * I can click a question mark to get an explanation for this screen.
   * Pressing back will take me back to the Home screen.
 #### Screen 2 "Off"
