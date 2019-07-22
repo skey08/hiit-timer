@@ -7,44 +7,19 @@ const Header = (props) => {
 	let screenToReturn = "hey there";
 	let iconToShow, titleToShow;
 
-
-	const screen0 = {
-		icon: "",
-		title: "Home Screen"
-	}
-
-	const screen1 = {
-		icon: "",
-		title: "Exercise Time"
-	}
-
-	const screen2 = {
-		icon: "",
-		title: "Exercise Time"
-	}
-
 	switch(props.currentScreen) {
 		case 0:
 			iconToShow = <img className="timer__logo-img" src="./assets/logo.png"/>;
-			titleToShow = <h2 class="timer__screen-title sr-only">{screen0.title}</h2>;
+			titleToShow = <h2 class="timer__screen-title sr-only">Home Screen</h2>;
 			break;
 		case 1:
-			iconToShow = "";
-			titleToShow = <h2 class="timer__screen-title">{screen1.title}</h2>;
+			iconToShow = null;
+			titleToShow = <h2 class="timer__screen-title">Exercise Time</h2>;
 			break;
 		default:
 			iconToShow = "";
 			titleToShow = "";
 	}
-
-	// let headerToShow = 
-
-	// console.log("screen1: ", screen1);
-
-	// let headerInfo = props.screenInfo(props.currentScreen);
-	// console.log("headerInfo from Header");
-	// console.log(headerInfo); 
-	// console.log(headerInfo.title);
 
 	return (
 		<header className={`timer__header`}>
