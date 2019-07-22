@@ -7,9 +7,15 @@ const Header = (props) => {
 	let screenToReturn = "hey there";
 	let iconToShow, titleToShow;
 
+
+	const screen0 = {
+		icon: "",
+		title: "Home Screen"
+	}
+
 	const screen1 = {
 		icon: "",
-		title: "Screen1 Title"
+		title: "Exercise Time"
 	}
 
 	const screen2 = {
@@ -20,11 +26,11 @@ const Header = (props) => {
 	switch(props.currentScreen) {
 		case 0:
 			iconToShow = <img className="timer__logo-img" src="./assets/logo.png"/>;
-			titleToShow = "Home Screen";
+			titleToShow = <h2 class="timer__screen-title sr-only">{screen0.title}</h2>;
 			break;
 		case 1:
 			iconToShow = "";
-			titleToShow = <h2 class="timer__screen-title">{screen2.title}</h2>;
+			titleToShow = <h2 class="timer__screen-title">{screen1.title}</h2>;
 			break;
 		default:
 			iconToShow = "";
