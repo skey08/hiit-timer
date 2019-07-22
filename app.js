@@ -5,6 +5,7 @@ const Header = (props) => {
 	console.log(props);
 	console.log("props.currentScreen: ", props.currentScreen);
 	let screenToReturn = "hey there";
+	let iconToShow, titleToShow;
 
 	const screen1 = {
 		icon: "",
@@ -13,18 +14,21 @@ const Header = (props) => {
 
 	const screen2 = {
 		icon: "",
-		title: "Screen2 Title"
+		title: "Exercise Time"
 	}
 
 	switch(props.currentScreen) {
 		case 0:
-			screenToReturn = <img className="timer__logo-img" src="./assets/logo.png"/>;
+			iconToShow = <img className="timer__logo-img" src="./assets/logo.png"/>;
+			titleToShow = "Home Screen";
 			break;
 		case 1:
-			screenToReturn = screen2.title;
+			iconToShow = "";
+			titleToShow = <h2 class="timer__screen-title">{screen2.title}</h2>;
 			break;
 		default:
-			screenToReturn = "";
+			iconToShow = "";
+			titleToShow = "";
 	}
 
 	// let headerToShow = 
@@ -37,10 +41,11 @@ const Header = (props) => {
 	// console.log(headerInfo.title);
 
 	return (
-		<header className={`timer__header ${props}`}>
+		<header className={`timer__header`}>
 			<h1 className="timer__main-heading sr-only">HIIT Timer</h1>
 			{/* <img className="timer__logo-img" src="./assets/logo.png"/> */}
-			{ screenToReturn }
+			{ iconToShow }
+			{ titleToShow }
 		</header>
 	)
 }

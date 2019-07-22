@@ -10,7 +10,8 @@ html {
 body {
   font-size: 16px;
   font-family: 'Alegreya Sans', sans-serif;
-  background: #222934; }
+  background: #222934;
+  color: #fff; }
 
 .timer__container {
   display: grid;
@@ -25,6 +26,13 @@ body {
 .timer__logo-img {
   max-width: 250px;
   margin-top: 35%; }
+.timer__screen-title {
+  width: 90%;
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 300;
+  line-height: .8;
+  margin: 0 auto; }
 .timer__body {
   display: grid;
   grid-row-gap: 2em;
