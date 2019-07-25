@@ -2,8 +2,8 @@
 
 const Header = (props) => {
 
-	console.log(props);
-	console.log("props.currentScreen: ", props.currentScreen);
+	// console.log(props);
+	// console.log("props.currentScreen: ", props.currentScreen);
 	let screenToReturn = "hey there";
 	let iconToShow, titleToShow;
 
@@ -13,13 +13,13 @@ const Header = (props) => {
 			titleToShow = <h2 class="timer__screen-title sr-only">Home Screen</h2>;
 			break;
 		case 1:
-			iconToShow = null;
+			iconToShow = <img className="timer__prompt-icon" src="./assets/icon-red-heart-green-bg.png"/>;
 			titleToShow = <h2 class="timer__screen-title">Exercise Time</h2>;
 			break;
 		case 2:
-				iconToShow = null;
-				titleToShow = <h2 class="timer__screen-title">Rest Time</h2>;
-				break;
+			iconToShow = null;
+			titleToShow = <h2 class="timer__screen-title">Rest Time</h2>;
+			break;
 		default:
 			iconToShow = null;
 			titleToShow = "";
@@ -28,8 +28,9 @@ const Header = (props) => {
 	return (
 		<header className={`timer__header`}>
 			<h1 className="timer__main-heading sr-only">HIIT Timer</h1>
-			{/* <img className="timer__logo-img" src="./assets/logo.png"/> */}
-			{ iconToShow }
+			<picture className="">
+				{ iconToShow }
+			</picture>
 			{ titleToShow }
 		</header>
 	)
@@ -37,6 +38,8 @@ const Header = (props) => {
 
 const TimerPrompt = (props) => {
 	// console.log(props.currentScreen);
+	console.log(props);
+
 	return (
 		<div className="timer__body">
 			<button className="timer__btn">
@@ -65,10 +68,10 @@ class Timer extends React.Component {
 	}
 
 	nextScreen = (screenNum) => {
-		console.log("screenNum from nextScreen() before ++: ", screenNum);
+		// console.log("screenNum from nextScreen() before ++: ", screenNum);
 		// console.log("go to the next screen");
 		screenNum++;
-		console.log("screenNum from nextScreen() after ++: ", screenNum);
+		// console.log("screenNum from nextScreen() after ++: ", screenNum);
 		this.setState({
 			screen: screenNum
 		})
