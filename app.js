@@ -60,30 +60,6 @@ class Timer extends React.Component {
 		}
 	}
 
-	// getScreenInfo = (currentScreen) => {
-	// 	console.log("currentScreen from getScreenInfo: ", currentScreen);
-	// 	let screenToReturn = "";
-
-	// 	const screen1 = {
-	// 		icon: "",
-	// 		title: "Screen1 Title"
-	// 	}
-
-	// 	const screen2 = {
-	// 		icon: "",
-	// 		title: "Screen2 Title"
-	// 	}
-
-	// 	switch (currentScreen) {
-	// 		case 1: 
-	// 			screenToReturn = screen2;
-	// 			break;
-	// 	}
-
-	// 	return screenToReturn;
-
-	// }
-
 	nextScreen = (screenNum) => {
 		console.log("screenNum from nextScreen() before ++: ", screenNum);
 		// console.log("go to the next screen");
