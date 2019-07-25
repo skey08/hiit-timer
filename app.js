@@ -16,8 +16,12 @@ const Header = (props) => {
 			iconToShow = null;
 			titleToShow = <h2 class="timer__screen-title">Exercise Time</h2>;
 			break;
+		case 2:
+				iconToShow = null;
+				titleToShow = <h2 class="timer__screen-title">Rest Time</h2>;
+				break;
 		default:
-			iconToShow = "";
+			iconToShow = null;
 			titleToShow = "";
 	}
 
