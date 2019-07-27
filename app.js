@@ -45,6 +45,7 @@ const TimerPrompt = (props) => {
 			{
 				screenNum: 0,
 				numOfButtons: 2,
+				hasIcons: true,
 				buttonInfo: [
 					{
 						icon: "./assets/icon-ring-simple.png",
@@ -64,16 +65,23 @@ const TimerPrompt = (props) => {
 				screenNum: 1,
 				numOfButtons: 4,
 				statePropToChange: "timeOn",
+				hasIcons: false,
 				buttonInfo: [
 					{
-						icon: "./assets/icon-ring-simple.png",
 						text: "0:20",
 						changeTo: 20
 					},
 					{
-						icon: "./assets/icon-ring-custom.png",
 						text: "0:30",
 						changeTo: 30
+					},
+					{
+						text: "0:45",
+						changeTo: 45
+					},
+					{
+						text: "1:00",
+						changeTo: 60
 					}
 				]
 			}
