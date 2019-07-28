@@ -36,15 +36,25 @@ const Header = (props) => {
 	)
 }
 
+const Button = (props) => {
+	return (
+		<button className="timer__btn" onClick={ () => props.nextScreen(props.currentScreen) }>
+			<picture className="timer__btn-picture">
+				<img src="./assets/icon-ring-simple.png" className="timer__btn-icon" />
+			</picture>
+			<span className="timer__btn-text">{props.btnText}</span>
+		</button>
+	)
+}
+
 const TimerPrompt = (props) => {
 	// console.log(props.currentScreen);
 	let iconToShow, titleToShow;
 	console.log(props);
 
-	let bodyContentInfo = [
+	const bodyContentInfo = [
 			{
 				screenNum: 0,
-				numOfButtons: 2,
 				hasIcons: true,
 				buttonInfo: [
 					{
@@ -63,7 +73,6 @@ const TimerPrompt = (props) => {
 			},
 			{
 				screenNum: 1,
-				numOfButtons: 4,
 				statePropToChange: "timeOn",
 				hasIcons: false,
 				buttonInfo: [
@@ -105,20 +114,36 @@ const TimerPrompt = (props) => {
 			titleToShow = "";
 	}
 
+	let screenToDisplay = bodyContentInfo.filter( (item) => item.screenNum === props.currentScreen)
+
+	console.log("screenToDisplay: ", screenToDisplay);
+
+	let buttonsToDisplay = screenToDisplay.map( (button) => {
+		return button.buttonInfo.map( (item) => {
+			return(
+				<Button btnText={item.text}/>
+			)
+		})
+	})
+
+	console.log("buttonsToDisplay: ", buttonsToDisplay);
+
 	return (
 		<div className="timer__body">
-			<button className="timer__btn">
+			{/* <button className="timer__btn" onClick={ () => props.nextScreen(props.currentScreen) }>
 				<picture className="timer__btn-picture">
 					<img src="./assets/icon-ring-simple.png" className="timer__btn-icon" />
 				</picture>
-				<span className="timer__btn-text" onClick={ () => props.nextScreen(props.currentScreen) }>Simple</span>
+				<span className="timer__btn-text">Simple</span>
 			</button>
 			<button className="timer__btn">
 				<picture className="timer__btn-picture">
 					<img src="./assets/icon-ring-custom.png" className="timer__btn-icon" />
 				</picture>
 				<span className="timer__btn-text">Custom</span>
-			</button>
+			</button> */}
+			{/* <Button /> */}
+			{ buttonsToDisplay }
 		</div>
 	)
 }
