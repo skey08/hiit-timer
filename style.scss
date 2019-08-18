@@ -61,6 +61,9 @@ body {
 		display: grid;
 		grid-row-gap: 2em;
 		justify-content: center;
+		&_screen_1 {
+			grid-row-gap: 1em;
+		}
 	}
 	&__btn {
 		background: $licorice;

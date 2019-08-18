@@ -140,7 +140,7 @@ const TimerPrompt = (props) => {
 	// console.log("buttonsToDisplay: ", buttonsToDisplay);
 
 	return (
-		<div className="timer__body">
+		<div className={`timer__body timer__body_screen_${props.currentScreen}`}>
 			{/* <button className="timer__btn" onClick={ () => props.nextScreen(props.currentScreen) }>
 				<picture className="timer__btn-picture">
 					<img src="./assets/icon-ring-simple.png" className="timer__btn-icon" />
