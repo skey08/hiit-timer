@@ -29,6 +29,9 @@ body {
 		display: grid;
 		grid-template-rows: auto 1fr;
 		grid-row-gap: 3em;
+		&_screen_1 {
+			grid-row-gap: 1em;
+		}
 	}
 	&__header {
 		text-align: center;
@@ -71,6 +74,7 @@ body {
 		font-size: 3rem;
 		font-weight: 300;
 		border: none;
+		min-width: 228px;
 	}
 	&__btn-picture {
 		// background: yellow;

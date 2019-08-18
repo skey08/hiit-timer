@@ -184,7 +184,7 @@ class Timer extends React.Component {
 
 	render() {
 		return(
-			<div className="timer__container">
+			<div className={`timer__container timer__container_screen_${this.state.screen}`}>
 				<Header currentScreen={this.state.screen} />
 				<TimerPrompt nextScreen={this.nextScreen} currentScreen={this.state.screen} getBodyContentInfo={this.getBodyContentInfo} />
 			</div>
