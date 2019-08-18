@@ -38,14 +38,14 @@ const Header = (props) => {
 
 const Button = (props) => {
 	const btnText = props.btnInfo.text
-	let currentScreen = props.stateProps.currentScreen
-	console.log("state props: ", props.stateProps);
+	const currentScreen = props.stateProps.currentScreen
+	// console.log("state props: ", props.stateProps);
 	console.log("Button props: ", props);
-	console.log("current screen: ", currentScreen);
+	// console.log("current screen: ", currentScreen);
 	return (
 		<button className="timer__btn" onClick={ () => props.stateProps.nextScreen(currentScreen) }>
 			<picture className="timer__btn-picture">
-				<img src="./assets/icon-ring-simple.png" className="timer__btn-icon" />
+				<img src={`${props.btnInfo.icon}`} className="timer__btn-icon" />
 			</picture>
 			<span className="timer__btn-text">{btnText}</span>
 		</button>
@@ -55,8 +55,8 @@ const Button = (props) => {
 const TimerPrompt = (props) => {
 	// console.log(props.currentScreen);
 	let iconToShow, titleToShow;
-	console.log(props);
-	console.log("current screen: ", props.currentScreen);
+	// console.log(props);
+	// console.log("current screen: ", props.currentScreen);
 
 	const bodyContentInfo = [
 			{
@@ -122,7 +122,7 @@ const TimerPrompt = (props) => {
 
 	let screenToDisplay = bodyContentInfo.filter( (item) => item.screenNum === props.currentScreen)
 
-	console.log("screenToDisplay: ", screenToDisplay);
+	// console.log("screenToDisplay: ", screenToDisplay);
 
 	let buttonsToDisplay = screenToDisplay.map( (button) => {
 		return button.buttonInfo.map( (btn) => {
@@ -132,7 +132,7 @@ const TimerPrompt = (props) => {
 		})
 	})
 
-	console.log("buttonsToDisplay: ", buttonsToDisplay);
+	// console.log("buttonsToDisplay: ", buttonsToDisplay);
 
 	return (
 		<div className="timer__body">
@@ -164,7 +164,7 @@ class Timer extends React.Component {
 	}
 
 	getBodyContentInfo = (screenNum) => {
-		console.log(screenNum);
+		// console.log(screenNum);
 	}
 
 	nextScreen = (screenNum) => {
