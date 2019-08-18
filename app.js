@@ -37,12 +37,17 @@ const Header = (props) => {
 }
 
 const Button = (props) => {
+	const btnText = props.btnInfo.text
+	let currentScreen = props.stateProps.currentScreen
+	console.log("state props: ", props.stateProps);
+	console.log("Button props: ", props);
+	console.log("current screen: ", currentScreen);
 	return (
-		<button className="timer__btn" onClick={ () => props.nextScreen(props.currentScreen) }>
+		<button className="timer__btn" onClick={ () => props.stateProps.nextScreen(currentScreen) }>
 			<picture className="timer__btn-picture">
 				<img src="./assets/icon-ring-simple.png" className="timer__btn-icon" />
 			</picture>
-			<span className="timer__btn-text">{props.btnText}</span>
+			<span className="timer__btn-text">{btnText}</span>
 		</button>
 	)
 }
@@ -51,6 +56,7 @@ const TimerPrompt = (props) => {
 	// console.log(props.currentScreen);
 	let iconToShow, titleToShow;
 	console.log(props);
+	console.log("current screen: ", props.currentScreen);
 
 	const bodyContentInfo = [
 			{
@@ -96,32 +102,32 @@ const TimerPrompt = (props) => {
 			}
 	]
 
-	switch(props.currentScreen) {
-		case 0:
-			iconToShow = <img className="timer__logo-img" src="./assets/logo.png"/>;
-			titleToShow = <h2 class="timer__screen-title sr-only">Home Screen</h2>;
-			break;
-		case 1:
-			iconToShow = <img className="timer__prompt-icon" src="./assets/icon-red-heart-green-bg.png"/>;
-			titleToShow = <h2 class="timer__screen-title">Exercise Time</h2>;
-			break;
-		case 2:
-			iconToShow = null;
-			titleToShow = <h2 class="timer__screen-title">Rest Time</h2>;
-			break;
-		default:
-			iconToShow = null;
-			titleToShow = "";
-	}
+	// switch(props.currentScreen) {
+	// 	case 0:
+	// 		iconToShow = <img className="timer__logo-img" src="./assets/logo.png"/>;
+	// 		titleToShow = <h2 class="timer__screen-title sr-only">Home Screen</h2>;
+	// 		break;
+	// 	case 1:
+	// 		iconToShow = <img className="timer__prompt-icon" src="./assets/icon-red-heart-green-bg.png"/>;
+	// 		titleToShow = <h2 class="timer__screen-title">Exercise Time</h2>;
+	// 		break;
+	// 	case 2:
+	// 		iconToShow = null;
+	// 		titleToShow = <h2 class="timer__screen-title">Rest Time</h2>;
+	// 		break;
+	// 	default:
+	// 		iconToShow = null;
+	// 		titleToShow = "";
+	// }
 
 	let screenToDisplay = bodyContentInfo.filter( (item) => item.screenNum === props.currentScreen)
 
 	console.log("screenToDisplay: ", screenToDisplay);
 
 	let buttonsToDisplay = screenToDisplay.map( (button) => {
-		return button.buttonInfo.map( (item) => {
+		return button.buttonInfo.map( (btn) => {
 			return(
-				<Button btnText={item.text}/>
+				<Button btnInfo={btn} stateProps={props}/>
 			)
 		})
 	})
