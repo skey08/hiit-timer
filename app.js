@@ -42,11 +42,16 @@ const Button = (props) => {
 	// console.log("state props: ", props.stateProps);
 	console.log("Button props: ", props);
 	// console.log("current screen: ", currentScreen);
+
+	
+
 	return (
 		<button className="timer__btn" onClick={ () => props.stateProps.nextScreen(currentScreen) }>
-			<picture className="timer__btn-picture">
-				<img src={`${props.btnInfo.icon}`} className="timer__btn-icon" />
-			</picture>
+			{ props.btnInfo.icon && 
+				<picture className="timer__btn-picture">
+					<img src={`${props.btnInfo.icon}`} className="timer__btn-icon" />
+				</picture> }
+			
 			<span className="timer__btn-text">{btnText}</span>
 		</button>
 	)
@@ -171,7 +176,7 @@ class Timer extends React.Component {
 		// console.log("screenNum from nextScreen() before ++: ", screenNum);
 		// console.log("go to the next screen");
 		screenNum++;
-		// console.log("screenNum from nextScreen() after ++: ", screenNum);
+		console.log("screenNum from nextScreen() after ++: ", screenNum);
 		this.setState({
 			screen: screenNum
 		})
