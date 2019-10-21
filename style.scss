@@ -28,10 +28,10 @@ body {
 	&__container {
 		display: grid;
 		grid-template-rows: auto 1fr;
-		grid-row-gap: 3em;
-		&_screen_1 {
-			grid-row-gap: 1em;
-		}
+		grid-row-gap: 1em;
+		// &_screen_1 {
+		// 	grid-row-gap: 1em;
+		// }
 	}
 	&__header {
 		text-align: center;
@@ -47,6 +47,7 @@ body {
 	&__logo-img {
 		max-width: 250px;
 		margin-top: 35%;
+		margin-bottom: 10%;
 	}
 	&__screen-title {
 		width: 90%;
@@ -59,11 +60,11 @@ body {
 	&__body {
 		// background: white;
 		display: grid;
-		grid-row-gap: 2em;
+		grid-row-gap: 1em;
 		justify-content: center;
-		&_screen_1 {
-			grid-row-gap: 1em;
-		}
+		// &_screen_1 {
+		// 	grid-row-gap: 1em;
+		// }
 	}
 	&__btn {
 		background: $licorice;
@@ -77,7 +78,7 @@ body {
 		font-size: 3rem;
 		font-weight: 300;
 		border: none;
-		min-width: 228px;
+		min-width: 300px;
 	}
 	&__btn-picture {
 		// background: yellow;
@@ -89,7 +90,11 @@ body {
 		margin: 15px;
 	}
 	&__btn-text {
-
+		width: 100%;
+		text-align: left;
+		&_no-icon {
+			text-align: center;
+		}
 	}
 }
 

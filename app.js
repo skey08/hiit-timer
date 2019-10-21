@@ -17,9 +17,9 @@ const Header = (props) => {
 			titleToShow = <h2 class="timer__screen-title">Exercise Time</h2>;
 			break;
 		case 2:
-			iconToShow = null;
+			iconToShow = <img className="timer__prompt-icon" src="./assets/icon-red-heart-green-bg.png"/>;
 			titleToShow = <h2 class="timer__screen-title">Rest Time</h2>;
-			break;
+			break; 
 		default:
 			iconToShow = null;
 			titleToShow = "";
@@ -43,7 +43,7 @@ const Button = (props) => {
 	console.log("Button props: ", props);
 	// console.log("current screen: ", currentScreen);
 
-	
+	let btnClass = props.btnInfo.icon ? "timer__btn-text" : "timer__btn-text timer__btn-text_no-icon"
 
 	return (
 		<button className="timer__btn" onClick={ () => props.stateProps.nextScreen(currentScreen) }>
@@ -52,7 +52,7 @@ const Button = (props) => {
 					<img src={`${props.btnInfo.icon}`} className="timer__btn-icon" />
 				</picture> }
 			
-			<span className="timer__btn-text">{btnText}</span>
+			<span className={btnClass}>{btnText}</span>
 		</button>
 	)
 }
@@ -102,6 +102,29 @@ const TimerPrompt = (props) => {
 					{
 						text: "1:00",
 						changeTo: 60
+					}
+				]
+			},
+			{
+				screenNum: 2,
+				statePropToChange: "timeOff",
+				hasIcons: false,
+				buttonInfo: [
+					{
+						text: "0:10",
+						changeTo: 10
+					},
+					{
+						text: "0:30",
+						changeTo: 30
+					},
+					{
+						text: "1:00",
+						changeTo: 60
+					},
+					{
+						text: "2:00",
+						changeTo: 120
 					}
 				]
 			}

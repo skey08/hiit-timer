@@ -18,9 +18,7 @@ body {
   .timer__container {
     display: grid;
     grid-template-rows: auto 1fr;
-    grid-row-gap: 3em; }
-    .timer__container_screen_1 {
-      grid-row-gap: 1em; }
+    grid-row-gap: 1em; }
   .timer__header {
     text-align: center;
     display: grid;
@@ -32,7 +30,8 @@ body {
     max-width: 80px; }
   .timer__logo-img {
     max-width: 250px;
-    margin-top: 35%; }
+    margin-top: 35%;
+    margin-bottom: 10%; }
   .timer__screen-title {
     width: 90%;
     text-transform: uppercase;
@@ -42,10 +41,8 @@ body {
     margin: 0 auto; }
   .timer__body {
     display: grid;
-    grid-row-gap: 2em;
+    grid-row-gap: 1em;
     justify-content: center; }
-    .timer__body_screen_1 {
-      grid-row-gap: 1em; }
   .timer__btn {
     background: #363e4d;
     display: flex;
@@ -58,13 +55,18 @@ body {
     font-size: 3rem;
     font-weight: 300;
     border: none;
-    min-width: 228px; }
+    min-width: 300px; }
   .timer__btn-picture {
     display: inline-flex;
     flex-direction: column; }
   .timer__btn-icon {
     max-width: 35px;
     margin: 15px; }
+  .timer__btn-text {
+    width: 100%;
+    text-align: left; }
+    .timer__btn-text_no-icon {
+      text-align: center; }
 
 .sr-only {
   position: absolute;
