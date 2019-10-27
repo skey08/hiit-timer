@@ -157,24 +157,6 @@ const TimerPrompt = (props) => {
 			}
 	]
 
-	// switch(props.currentScreen) {
-	// 	case 0:
-	// 		iconToShow = <img className="timer__logo-img" src="./assets/logo.png"/>;
-	// 		titleToShow = <h2 class="timer__screen-title sr-only">Home Screen</h2>;
-	// 		break;
-	// 	case 1:
-	// 		iconToShow = <img className="timer__prompt-icon" src="./assets/icon-red-heart-green-bg.png"/>;
-	// 		titleToShow = <h2 class="timer__screen-title">Exercise Time</h2>;
-	// 		break;
-	// 	case 2:
-	// 		iconToShow = null;
-	// 		titleToShow = <h2 class="timer__screen-title">Rest Time</h2>;
-	// 		break;
-	// 	default:
-	// 		iconToShow = null;
-	// 		titleToShow = "";
-	// }
-
 	let screenToDisplay = bodyContentInfo.filter( (item) => item.screenNum === props.currentScreen)
 
 	// console.log("screenToDisplay: ", screenToDisplay);
