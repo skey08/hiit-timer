@@ -19,6 +19,10 @@ const Header = (props) => {
 		case 2:
 			iconToShow = <img className="timer__prompt-icon" src="./assets/icon-red-heart-green-bg.png"/>;
 			titleToShow = <h2 class="timer__screen-title">Rest Time</h2>;
+			break;
+		case 3:
+			iconToShow = <img className="timer__prompt-icon" src="./assets/icon-red-heart-green-bg.png"/>;
+			titleToShow = <h2 class="timer__screen-title">Number of Sets</h2>;
 			break; 
 		default:
 			iconToShow = null;
@@ -125,6 +129,29 @@ const TimerPrompt = (props) => {
 					{
 						text: "2:00",
 						changeTo: 120
+					}
+				]
+			},
+			{
+				screenNum: 3,
+				statePropToChange: "numOfSets",
+				hasIcons: false,
+				buttonInfo: [
+					{
+						text: "5",
+						changeTo: 5
+					},
+					{
+						text: "8",
+						changeTo: 8
+					},
+					{
+						text: "10",
+						changeTo: 10
+					},
+					{
+						text: "16",
+						changeTo: 16
 					}
 				]
 			}
