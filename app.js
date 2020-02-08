@@ -4,7 +4,6 @@ const Header = (props) => {
 
 	// console.log(props);
 	// console.log("props.currentScreen: ", props.currentScreen);
-	let screenToReturn = "hey there";
 	let iconToShow, titleToShow;
 
 	switch(props.currentScreen) {
@@ -44,7 +43,7 @@ const Button = (props) => {
 	const btnText = props.btnInfo.text
 	const currentScreen = props.stateProps.currentScreen
 	// console.log("state props: ", props.stateProps);
-	console.log("Button props: ", props);
+	// console.log("Button props: ", props);
 	// console.log("current screen: ", currentScreen);
 
 	let btnClass = props.btnInfo.icon ? "timer__btn-text" : "timer__btn-text timer__btn-text_no-icon"
@@ -193,10 +192,13 @@ const TimerPrompt = (props) => {
 
 class Timer extends React.Component {
 	constructor(props) {
-		super(props);
+		super(props)
 		this.state = {
 			screen: 0,
-			
+			timerType: null,
+			timeOn: null,
+			timeOff: null,
+			numOfSets: null
 		}
 	}
 
@@ -205,13 +207,25 @@ class Timer extends React.Component {
 	}
 
 	nextScreen = (screenNum) => {
-		// console.log("screenNum from nextScreen() before ++: ", screenNum);
-		// console.log("go to the next screen");
-		screenNum++;
-		console.log("screenNum from nextScreen() after ++: ", screenNum);
+		console.log("next screen clicked");
+		console.log("screenNum", screenNum)
+		// const statePropToChange = props.btnInfo.statePropToChange
+		// const changeTo = props.btnInfo.changeTo
+		// console.log("statePropToChange: ", statePropToChange)
+		// console.log("changeTo: ", changeTo)
+		// // console.log("e: ", e);
+		// console.log(this.state.screen);
 		this.setState({
-			screen: screenNum
+			screen: screenNum,
+			timerType: "simple"
+		}, function() {
+			console.log(this.state)
 		})
+		// this.setState({
+		// 	screen: screenNum
+		// })
+		// console.log("screenNum: ", screenNum)
+		// console.log("state: ", this.state)
 	}
 
 	render() {
