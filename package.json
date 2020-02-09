@@ -4,7 +4,8 @@
   "description": "HIIT Timer",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "react-scripts start"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,22 @@
     "url": "https://github.com/Ly900/hiit-timer/issues"
   },
   "homepage": "https://github.com/Ly900/hiit-timer#readme",
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-scripts": "^3.3.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
