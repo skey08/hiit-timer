@@ -1,4 +1,10 @@
+import React from 'react';
+import './App.css';
 
+import logo from './assets/logo.png';
+import ringSimple from './assets/icon-ring-simple.png';
+import ringCustom from './assets/icon-ring-custom.png';
+import redHeart from './assets/icon-red-heart-green-bg.png';
 
 const Header = (props) => {
 
@@ -9,20 +15,20 @@ const Header = (props) => {
 
 	switch(props.currentScreen) {
 		case 0:
-			iconToShow = <img className="timer__logo-img" src="./assets/logo.png"/>;
-			titleToShow = <h2 class="timer__screen-title sr-only">Home Screen</h2>;
+			iconToShow = <img className="timer__logo-img" src={logo} alt="" />;
+			titleToShow = <h2 className="timer__screen-title sr-only">Home Screen</h2>;
 			break;
 		case 1:
-			iconToShow = <img className="timer__prompt-icon" src="./assets/icon-red-heart-green-bg.png"/>;
-			titleToShow = <h2 class="timer__screen-title">Exercise Time</h2>;
+			iconToShow = <img className="timer__prompt-icon" src={redHeart} alt="" />;
+			titleToShow = <h2 className="timer__screen-title">Exercise Time</h2>;
 			break;
 		case 2:
-			iconToShow = <img className="timer__prompt-icon" src="./assets/icon-red-heart-green-bg.png"/>;
-			titleToShow = <h2 class="timer__screen-title">Rest Time</h2>;
+			iconToShow = <img className="timer__prompt-icon" src={redHeart} alt="" />;
+			titleToShow = <h2 className="timer__screen-title">Rest Time</h2>;
 			break;
 		case 3:
-			iconToShow = <img className="timer__prompt-icon" src="./assets/icon-red-heart-green-bg.png"/>;
-			titleToShow = <h2 class="timer__screen-title">Number of Sets</h2>;
+			iconToShow = <img className="timer__prompt-icon" src={redHeart} alt="" />;
+			titleToShow = <h2 className="timer__screen-title">Number of Sets</h2>;
 			break; 
 		default:
 			iconToShow = null;
@@ -50,10 +56,10 @@ const Button = (props) => {
 	let btnClass = props.btnInfo.icon ? "timer__btn-text" : "timer__btn-text timer__btn-text_no-icon"
 
 	return (
-		<button className="timer__btn" onClick={ () => props.stateProps.nextScreen(currentScreen) }>
+		<button className="timer__btn" onClick={ () => props.stateProps.nextScreen(currentScreen) } >
 			{ props.btnInfo.icon && 
 				<picture className="timer__btn-picture">
-					<img src={`${props.btnInfo.icon}`} className="timer__btn-icon" />
+					<img src={`${props.btnInfo.icon}`} className="timer__btn-icon" alt="" />
 				</picture> }
 			
 			<span className={btnClass}>{btnText}</span>
@@ -63,7 +69,7 @@ const Button = (props) => {
 
 const TimerPrompt = (props) => {
 	// console.log(props.currentScreen);
-	let iconToShow, titleToShow;
+	// let iconToShow, titleToShow;
 	// console.log(props);
 	// console.log("current screen: ", props.currentScreen);
 
@@ -73,13 +79,13 @@ const TimerPrompt = (props) => {
 				hasIcons: true,
 				buttonInfo: [
 					{
-						icon: "./assets/icon-ring-simple.png",
+						icon: ringSimple,
 						text: "Simple",
 						statePropToChange: "timerType",
 						changeTo: "simple"
 					},
 					{
-						icon: "./assets/icon-ring-custom.png",
+						icon: ringCustom,
 						text: "Complex",
 						statePropToChange: "timerType",
 						changeTo: "complex"
@@ -162,9 +168,9 @@ const TimerPrompt = (props) => {
 	// console.log("screenToDisplay: ", screenToDisplay);
 
 	let buttonsToDisplay = screenToDisplay.map( (button) => {
-		return button.buttonInfo.map( (btn) => {
+		return button.buttonInfo.map( (btn, index) => {
 			return(
-				<Button btnInfo={btn} stateProps={props}/>
+				<Button btnInfo={btn} stateProps={props} key={index}/>
 			)
 		})
 	})
@@ -205,12 +211,19 @@ class Timer extends React.Component {
 	}
 
 	nextScreen = (screenNum) => {
-		// console.log("screenNum from nextScreen() before ++: ", screenNum);
-		// console.log("go to the next screen");
+		console.log("next screen clicked");
+		console.log("screenNum", screenNum)
+		// const statePropToChange = props.btnInfo.statePropToChange
+		// const changeTo = props.btnInfo.changeTo
+		// console.log("statePropToChange: ", statePropToChange)
+		// console.log("changeTo: ", changeTo)
+		// // console.log("e: ", e);
+		// console.log(this.state.screen);
 		screenNum++;
-		console.log("screenNum from nextScreen() after ++: ", screenNum);
 		this.setState({
 			screen: screenNum
+		}, function() {
+			console.log(this.state)
 		})
 	}
 
@@ -224,7 +237,4 @@ class Timer extends React.Component {
 	}
 }
 
-ReactDOM.render(
-	<Timer/>,
-	document.getElementById("timer")
-);
+export default Timer;
