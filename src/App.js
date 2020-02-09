@@ -221,9 +221,9 @@ class Timer extends React.Component {
 		// console.log("changeTo: ", changeTo)
 		// // console.log("e: ", e);
 		// console.log(this.state.screen);
+		screenNum++;
 		this.setState({
-			screen: screenNum,
-			timerType: "simple"
+			screen: screenNum
 		}, function() {
 			console.log(this.state)
 		})
