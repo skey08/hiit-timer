@@ -1,4 +1,9 @@
+import React from 'react';
+import './App.css';
 
+import logo from './assets/logo.png';
+import ringSimple from './assets/icon-ring-custom.png';
+import ringCustom from './assets/icon-ring-custom.png';
 
 const Header = (props) => {
 
@@ -8,7 +13,7 @@ const Header = (props) => {
 
 	switch(props.currentScreen) {
 		case 0:
-			iconToShow = <img className="timer__logo-img" src="./assets/logo.png"/>;
+			iconToShow = <img className="timer__logo-img" src={logo}/>;
 			titleToShow = <h2 class="timer__screen-title sr-only">Home Screen</h2>;
 			break;
 		case 1:
@@ -72,13 +77,13 @@ const TimerPrompt = (props) => {
 				hasIcons: true,
 				buttonInfo: [
 					{
-						icon: "./assets/icon-ring-simple.png",
+						icon: ringSimple,
 						text: "Simple",
 						statePropToChange: "timerType",
 						changeTo: "simple"
 					},
 					{
-						icon: "./assets/icon-ring-custom.png",
+						icon: ringCustom,
 						text: "Complex",
 						statePropToChange: "timerType",
 						changeTo: "complex"
@@ -238,7 +243,4 @@ class Timer extends React.Component {
 	}
 }
 
-ReactDOM.render(
-	<Timer/>,
-	document.getElementById("timer")
-);
+export default Timer;
