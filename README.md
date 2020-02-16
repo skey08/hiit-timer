@@ -58,4 +58,4 @@ A HIIT or Tabata-style timer to help you exercise, lose weight, and burn fat.
 * If I choose to continue the workout, I am returned to the exercise screen with the workout paused until I press play.
 * If I choose to end the workout, I am returned to the Home screen.
 
-<center><img src="/assets/hiit-timer-screenshot.png" alt="HIIT Timer" width=50%></center>
+<center><img src="/src/assets/hiit-timer-screenshot.png" alt="HIIT Timer" width=50%></center>
