@@ -6,7 +6,13 @@ $yellow: #f7c422;
 $blackPearl: lighten(#1E242E, 2%);
 $licorice: lighten(#323947, 2%);
 
-html, body, div, h1, span, picture, img {
+html,
+body,
+div,
+h1,
+span,
+picture,
+img {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
@@ -25,6 +31,7 @@ body {
 
 .timer {
 	padding: 2em 1.5em 1.5em 1.5em;
+
 	&__container {
 		display: grid;
 		grid-template-rows: auto 1fr;
@@ -33,6 +40,7 @@ body {
 		// 	grid-row-gap: 1em;
 		// }
 	}
+
 	&__header {
 		text-align: center;
 		display: grid;
@@ -41,22 +49,26 @@ body {
 		justify-content: center;
 		grid-row-gap: 1.5em;
 	}
+
 	&__prompt-icon {
 		max-width: 80px;
 	}
+
 	&__logo-img {
 		max-width: 250px;
 		margin-top: 35%;
 		margin-bottom: 10%;
 	}
+
 	&__screen-title {
 		width: 90%;
-    text-transform: uppercase;
-    font-size: 4rem;
-    font-weight: 300;
-    line-height: .9;
-    margin: 0 auto;
+		text-transform: uppercase;
+		font-size: 4rem;
+		font-weight: 300;
+		line-height: .9;
+		margin: 0 auto;
 	}
+
 	&__body {
 		// background: white;
 		display: grid;
@@ -66,6 +78,7 @@ body {
 		// 	grid-row-gap: 1em;
 		// }
 	}
+
 	&__btn {
 		background: $licorice;
 		display: flex;
@@ -80,18 +93,22 @@ body {
 		border: none;
 		min-width: 300px;
 	}
+
 	&__btn-picture {
 		// background: yellow;
 		display: inline-flex;
 		flex-direction: column;
 	}
+
 	&__btn-icon {
 		max-width: 35px;
 		margin: 15px;
 	}
+
 	&__btn-text {
 		width: 100%;
 		text-align: left;
+
 		&_no-icon {
 			text-align: center;
 		}
@@ -105,6 +122,6 @@ body {
 	padding: 0;
 	margin: -1px;
 	overflow: hidden;
-	clip: rect(0,0,0,0);
+	clip: rect(0, 0, 0, 0);
 	border: 0;
 }
