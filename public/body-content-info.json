@@ -1,17 +1,16 @@
 [{
 		"screenNum": 0,
+		"statePropToChange": "timerType",
 		"hasIcons": true,
 		"buttonInfo": [{
 				"icon": "icon-ring-simple.png",
 				"text": "Simple",
-				"statePropToChange": "timerType",
-				"changeTo": "simple"
+				"value": "simple"
 			},
 			{
 				"icon": "icon-ring-custom.png",
 				"text": "Complex",
-				"statePropToChange": "timerType",
-				"changeTo": "complex"
+				"value": "complex"
 			}
 		]
 	},
@@ -21,19 +20,19 @@
 		"hasIcons": false,
 		"buttonInfo": [{
 				"text": "0:20",
-				"changeTo": 20
+				"value": 20
 			},
 			{
 				"text": "0:30",
-				"changeTo": 30
+				"value": 30
 			},
 			{
 				"text": "0:45",
-				"changeTo": 45
+				"value": 45
 			},
 			{
 				"text": "1:00",
-				"changeTo": 60
+				"value": 60
 			}
 		]
 	},
@@ -43,19 +42,19 @@
 		"hasIcons": false,
 		"buttonInfo": [{
 				"text": "0:10",
-				"changeTo": 10
+				"value": 10
 			},
 			{
 				"text": "0:30",
-				"changeTo": 30
+				"value": 30
 			},
 			{
 				"text": "1:00",
-				"changeTo": 60
+				"value": 60
 			},
 			{
 				"text": "2:00",
-				"changeTo": 120
+				"value": 120
 			}
 		]
 	},
@@ -65,19 +64,19 @@
 		"hasIcons": false,
 		"buttonInfo": [{
 				"text": "5",
-				"changeTo": 5
+				"value": 5
 			},
 			{
 				"text": "8",
-				"changeTo": 8
+				"value": 8
 			},
 			{
 				"text": "10",
-				"changeTo": 10
+				"value": 10
 			},
 			{
 				"text": "16",
-				"changeTo": 16
+				"value": 16
 			}
 		]
 	}

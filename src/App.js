@@ -40,28 +40,21 @@ const Header = (props) => {
 }
 
 const Button = (props) => {
-	const btnText = props.btnInfo.text
-	// const currentScreen = props.stateProps.currentScreen
-	// console.log("state props: ", props.stateProps);
+	const btnText = props.btnInfo.text;
 	const btnInfo = props.btnInfo;
-	// console.log("Button info prop: ", btnInfo);
-	// console.log("current screen: ", currentScreen);
-	// console.log("Button props: ", props);
-	// const bodyContentInfo = props.bodyContentInfo;
-	// console.log("bodyContentInfo: ", bodyContentInfo);
-
-	let btnClass = props.btnInfo.icon ? "timer__btn-text" : "timer__btn-text timer__btn-text_no-icon";
-	// console.log("props.btnInfo.icon", props.btnInfo.icon);
+	const screenInfo = props.screenInfo;
+	const btnClass = props.btnInfo.icon ? "timer__btn-text" : "timer__btn-text timer__btn-text_no-icon";
+	// console.log("props.screenInfo: ", props.screenInfo);
+	console.log("button props: ", props.btnInfo);
 
 	return (
-		// <button className="timer__btn" onClick={() => props.stateProps.nextScreen(currentScreen)} >
-		<button className="timer__btn" onClick={() => props.handleClick(btnInfo)} >
+		<button className="timer__btn" onClick={(e) => props.handleClick(screenInfo, e)} >
 			{props.btnInfo.icon &&
 				<picture className="timer__btn-picture">
 					<img src={require(`./assets/${btnInfo.icon}`)} className="timer__btn-icon" alt="" />
 				</picture>}
 
-			<span className={btnClass}>{btnText}</span>
+			<span className={btnClass} data-attribute={`${btnInfo.value}`}>{btnText}</span>
 		</button>
 	)
 }
@@ -75,9 +68,15 @@ const TimerPrompt = (props) => {
 	const screenToDisplay = props.bodyContentInfo.filter((item) => item.screenNum === props.currentScreen);
 
 	const buttonsToDisplay = screenToDisplay.map((button) => {
+		// console.log("button: ", button);
 		return button.buttonInfo.map((btn, index) => {
 			return (
-				<Button key={index} btnInfo={btn} bodyContentInfo={props.bodyContentInfo} handleClick={props.handleClick} />
+				<Button
+					key={index}
+					btnInfo={btn}
+					screenInfo={button}
+					bodyContentInfo={props.bodyContentInfo}
+					handleClick={props.handleClick} />
 			)
 		})
 	})
@@ -110,8 +109,9 @@ class Timer extends React.Component {
 		);
 	}
 
-	handleClick = (btnInfo) => {
-		// console.log("btnInfo: ", btnInfo);
+	handleClick = (btnInfo, e) => {
+		console.log("btnInfo: ", btnInfo);
+		console.log("e: ", e.target);
 		this.nextScreen();
 	}
 
