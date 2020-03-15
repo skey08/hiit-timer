@@ -2,9 +2,10 @@ import React from 'react';
 import './App.css';
 
 import logo from './assets/logo.png';
-import ringSimple from './assets/icon-ring-simple.png';
-import ringCustom from './assets/icon-ring-custom.png';
+import './assets/icon-ring-simple.png';
+import './assets/icon-ring-custom.png';
 import redHeart from './assets/icon-red-heart-green-bg.png';
+// import bodyContentInfo from './body-content-info.json';
 
 const Header = (props) => {
 
@@ -50,17 +51,22 @@ const Button = (props) => {
 	const btnText = props.btnInfo.text
 	// const currentScreen = props.stateProps.currentScreen
 	// console.log("state props: ", props.stateProps);
-	console.log("Button props: ", props);
+	const btnInfo = props.btnInfo;
+	// console.log("Button info prop: ", btnInfo);
 	// console.log("current screen: ", currentScreen);
+	// console.log("Button props: ", props);
+	// const bodyContentInfo = props.bodyContentInfo;
+	// console.log("bodyContentInfo: ", bodyContentInfo);
 
-	let btnClass = props.btnInfo.icon ? "timer__btn-text" : "timer__btn-text timer__btn-text_no-icon"
+	let btnClass = props.btnInfo.icon ? "timer__btn-text" : "timer__btn-text timer__btn-text_no-icon";
+	// console.log("props.btnInfo.icon", props.btnInfo.icon);
 
 	return (
 		// <button className="timer__btn" onClick={() => props.stateProps.nextScreen(currentScreen)} >
-		<button className="timer__btn" onClick={() => props.handleClick()} >
+		<button className="timer__btn" onClick={() => props.handleClick(btnInfo)} >
 			{props.btnInfo.icon &&
 				<picture className="timer__btn-picture">
-					<img src={`${props.btnInfo.icon}`} className="timer__btn-icon" alt="" />
+					<img src={require(`./assets/${btnInfo.icon}`)} className="timer__btn-icon" alt="" />
 				</picture>}
 
 			<span className={btnClass}>{btnText}</span>
@@ -74,105 +80,111 @@ const TimerPrompt = (props) => {
 	// console.log("TimerPrompt props: ", props);
 	// console.log("current screen: ", props.currentScreen);
 
-	const bodyContentInfo = [
-		{
-			screenNum: 0,
-			hasIcons: true,
-			buttonInfo: [
-				{
-					icon: ringSimple,
-					text: "Simple",
-					statePropToChange: "timerType",
-					changeTo: "simple"
-				},
-				{
-					icon: ringCustom,
-					text: "Complex",
-					statePropToChange: "timerType",
-					changeTo: "complex"
-				}
-			]
-		},
-		{
-			screenNum: 1,
-			statePropToChange: "timeOn",
-			hasIcons: false,
-			buttonInfo: [
-				{
-					text: "0:20",
-					changeTo: 20
-				},
-				{
-					text: "0:30",
-					changeTo: 30
-				},
-				{
-					text: "0:45",
-					changeTo: 45
-				},
-				{
-					text: "1:00",
-					changeTo: 60
-				}
-			]
-		},
-		{
-			screenNum: 2,
-			statePropToChange: "timeOff",
-			hasIcons: false,
-			buttonInfo: [
-				{
-					text: "0:10",
-					changeTo: 10
-				},
-				{
-					text: "0:30",
-					changeTo: 30
-				},
-				{
-					text: "1:00",
-					changeTo: 60
-				},
-				{
-					text: "2:00",
-					changeTo: 120
-				}
-			]
-		},
-		{
-			screenNum: 3,
-			statePropToChange: "numOfSets",
-			hasIcons: false,
-			buttonInfo: [
-				{
-					text: "5",
-					changeTo: 5
-				},
-				{
-					text: "8",
-					changeTo: 8
-				},
-				{
-					text: "10",
-					changeTo: 10
-				},
-				{
-					text: "16",
-					changeTo: 16
-				}
-			]
-		}
-	]
+	// const bodyContentInfo = [
+	// 	{
+	// 		screenNum: 0,
+	// 		hasIcons: true,
+	// 		buttonInfo: [
+	// 			{
+	// 				icon: ringSimple,
+	// 				text: "Simple",
+	// 				statePropToChange: "timerType",
+	// 				changeTo: "simple"
+	// 			},
+	// 			{
+	// 				icon: ringCustom,
+	// 				text: "Complex",
+	// 				statePropToChange: "timerType",
+	// 				changeTo: "complex"
+	// 			}
+	// 		]
+	// 	},
+	// 	{
+	// 		screenNum: 1,
+	// 		statePropToChange: "timeOn",
+	// 		hasIcons: false,
+	// 		buttonInfo: [
+	// 			{
+	// 				text: "0:20",
+	// 				changeTo: 20
+	// 			},
+	// 			{
+	// 				text: "0:30",
+	// 				changeTo: 30
+	// 			},
+	// 			{
+	// 				text: "0:45",
+	// 				changeTo: 45
+	// 			},
+	// 			{
+	// 				text: "1:00",
+	// 				changeTo: 60
+	// 			}
+	// 		]
+	// 	},
+	// 	{
+	// 		screenNum: 2,
+	// 		statePropToChange: "timeOff",
+	// 		hasIcons: false,
+	// 		buttonInfo: [
+	// 			{
+	// 				text: "0:10",
+	// 				changeTo: 10
+	// 			},
+	// 			{
+	// 				text: "0:30",
+	// 				changeTo: 30
+	// 			},
+	// 			{
+	// 				text: "1:00",
+	// 				changeTo: 60
+	// 			},
+	// 			{
+	// 				text: "2:00",
+	// 				changeTo: 120
+	// 			}
+	// 		]
+	// 	},
+	// 	{
+	// 		screenNum: 3,
+	// 		statePropToChange: "numOfSets",
+	// 		hasIcons: false,
+	// 		buttonInfo: [
+	// 			{
+	// 				text: "5",
+	// 				changeTo: 5
+	// 			},
+	// 			{
+	// 				text: "8",
+	// 				changeTo: 8
+	// 			},
+	// 			{
+	// 				text: "10",
+	// 				changeTo: 10
+	// 			},
+	// 			{
+	// 				text: "16",
+	// 				changeTo: 16
+	// 			}
+	// 		]
+	// 	}
+	// ]
 
-	let screenToDisplay = bodyContentInfo.filter((item) => item.screenNum === props.currentScreen)
+	if (props.loading) {
+		return <div>Loading...</div>;
+	}
+
+	const bodyContentInfo = props.bodyContentInfo;
+	// console.log(typeof (bodyContentInfo));
+
+	let screenToDisplay = bodyContentInfo.filter((item) => item.screenNum === props.currentScreen);
 
 	// console.log("screenToDisplay: ", screenToDisplay);
 
 	let buttonsToDisplay = screenToDisplay.map((button) => {
 		return button.buttonInfo.map((btn, index) => {
 			return (
-				<Button btnInfo={btn} stateProps={props} key={index} currentScreen={props.currentScreen} handleClick={props.handleClick} />
-				// <Button btnInfo={btn} key={index} currentScreen={props.currentScreen} />
+				<Button key={index} btnInfo={btn} bodyContentInfo={bodyContentInfo} handleClick={props.handleClick} />
 			)
 		})
 	})
@@ -203,6 +215,8 @@ class Timer extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
+			loading: true,
+			bodyContentInfo: [],
 			screenNum: 0,
 			timerType: null
 		}
@@ -213,21 +227,40 @@ class Timer extends React.Component {
 		this.setState({
 			screenNum: this.state.screenNum + 1
 		}, () => {
-			console.log("state screen number", this.state.screenNum);
+			// console.log("state screen number", this.state.screenNum);
 		}
 		);
 	}
 
-	handleClick = () => {
-		console.log("clicked");
+	handleClick = (btnInfo) => {
+		// console.log("btnInfo: ", btnInfo);
 		this.nextScreen();
+	}
+
+	componentDidMount() {
+		fetch("./body-content-info.json")
+			.then(response => response.json())
+			.then(data =>
+				this.setState(
+					{
+						loading: false,
+						bodyContentInfo: data
+					}, () => {
+						// console.log("bodyContentInfo: ", this.state.bodyContentInfo);
+					})
+			)
 	}
 
 	render() {
 		return (
 			<div className={`timer__container timer__container_screen_${this.state.screenNum}`}>
 				<Header currentScreen={this.state.screenNum} />
-				<TimerPrompt nextScreen={this.nextScreen} currentScreen={this.state.screenNum} handleClick={this.handleClick} />
+				<TimerPrompt
+					nextScreen={this.nextScreen}
+					loading={this.state.loading}
+					currentScreen={this.state.screenNum}
+					bodyContentInfo={this.state.bodyContentInfo}
+					handleClick={this.handleClick} />
 			</div>
 		)
 	}
