@@ -1,50 +1,12 @@
 import React from 'react';
 import './App.css';
 
-import logo from './assets/logo.png';
+//images
 import ringSimple from './assets/icon-ring-simple.png';
 import ringCustom from './assets/icon-ring-custom.png';
-import redHeart from './assets/icon-red-heart-green-bg.png';
 
-const Header = (props) => {
-
-	// console.log(props);
-	// console.log("props.currentScreen: ", props.currentScreen);
-	// let screenToReturn = "hey there";
-	let iconToShow, titleToShow;
-
-	switch (props.currentScreen) {
-		case 0:
-			iconToShow = <img className="timer__logo-img" src={logo} alt="" />;
-			titleToShow = <h2 className="timer__screen-title sr-only">Home Screen</h2>;
-			break;
-		case 1:
-			iconToShow = <img className="timer__prompt-icon" src={redHeart} alt="" />;
-			titleToShow = <h2 className="timer__screen-title">Exercise Time</h2>;
-			break;
-		case 2:
-			iconToShow = <img className="timer__prompt-icon" src={redHeart} alt="" />;
-			titleToShow = <h2 className="timer__screen-title">Rest Time</h2>;
-			break;
-		case 3:
-			iconToShow = <img className="timer__prompt-icon" src={redHeart} alt="" />;
-			titleToShow = <h2 className="timer__screen-title">Number of Sets</h2>;
-			break;
-		default:
-			iconToShow = null;
-			titleToShow = "";
-	}
-
-	return (
-		<header className={`timer__header`}>
-			<h1 className="timer__main-heading sr-only">HIIT Timer</h1>
-			<picture className="">
-				{iconToShow}
-			</picture>
-			{titleToShow}
-		</header>
-	)
-}
+//components
+import { Header } from './components/header/header';
 
 const Button = (props) => {
 	const btnText = props.btnInfo.text
