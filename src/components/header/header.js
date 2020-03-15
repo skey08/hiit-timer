@@ -1,5 +1,6 @@
 import React from 'react';
 
+//images
 import logo from '../../assets/logo.png';
 import redHeart from '../../assets/icon-red-heart-green-bg.png';
 
