@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/Ly900/hiit-timer/issues"
   },
-  "homepage": "http://skey08.github.io/react-gh-pages",
+  "homepage": "http://skey08.github.io/hiit-timer",
   "dependencies": {},
   "devDependencies": {
     "gh-pages": "^2.2.0",
