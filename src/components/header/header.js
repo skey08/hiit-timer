@@ -5,10 +5,7 @@ import logo from '../../assets/logo.png';
 import redHeart from '../../assets/icon-red-heart-green-bg.png';
 
 export const Header = (props) => {
-
-	// console.log(props);
-	// console.log("props.currentScreen: ", props.currentScreen);
-	// let screenToReturn = "hey there";
+	
 	let iconToShow, titleToShow;
 
 	switch (props.currentScreen) {
@@ -27,6 +24,10 @@ export const Header = (props) => {
 		case 3:
 			iconToShow = <img className="timer__prompt-icon" src={redHeart} alt="" />;
 			titleToShow = <h2 className="timer__screen-title">Number of Sets</h2>;
+			break;
+		case 4:
+			iconToShow = <img className="timer__prompt-icon" src={redHeart} alt="" />;
+			titleToShow = <h2 className="timer__screen-title">Workout Summary</h2>;
 			break;
 		default:
 			iconToShow = null;
