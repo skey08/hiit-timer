@@ -45,7 +45,7 @@ const Button = (props) => {
 	const screenInfo = props.screenInfo;
 	const btnClass = props.btnInfo.icon ? "timer__btn-text" : "timer__btn-text timer__btn-text_no-icon";
 	// console.log("props.screenInfo: ", props.screenInfo);
-	console.log("button props: ", props.btnInfo);
+	// console.log("button props: ", props.btnInfo);
 
 	return (
 		<button className="timer__btn" onClick={(e) => props.handleClick(screenInfo, e)} >
@@ -54,7 +54,7 @@ const Button = (props) => {
 					<img src={require(`./assets/${btnInfo.icon}`)} className="timer__btn-icon" alt="" />
 				</picture>}
 
-			<span className={btnClass} data-attribute={`${btnInfo.value}`}>{btnText}</span>
+			<span className={btnClass} data-value={`${btnInfo.value}`}>{btnText}</span>
 		</button>
 	)
 }
@@ -111,8 +111,17 @@ class Timer extends React.Component {
 
 	handleClick = (btnInfo, e) => {
 		console.log("btnInfo: ", btnInfo);
-		console.log("e: ", e.target);
-		this.nextScreen();
+		console.log("e data-value: ", e.target.getAttribute("data-value"));
+		const statePropToChange = btnInfo.statePropToChange;
+		const val = e.target.getAttribute("data-value");
+		this.setState(
+			{
+				[statePropToChange]: val
+			}, () => {
+				console.log("this.state: ", this.state);
+				this.nextScreen();
+			})
+
 	}
 
 	componentDidMount() {
