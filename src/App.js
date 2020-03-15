@@ -23,6 +23,10 @@ const Header = (props) => {
 			iconToShow = <img className="timer__prompt-icon" src={redHeart} alt="" />;
 			titleToShow = <h2 className="timer__screen-title">Number of Sets</h2>;
 			break;
+		case 4:
+			iconToShow = <img className="timer__prompt-icon" src={redHeart} alt="" />;
+			titleToShow = <h2 className="timer__screen-title">Workout Summary</h2>;
+			break;
 		default:
 			iconToShow = null;
 			titleToShow = "";
